@@ -32,6 +32,8 @@ test:
 about:
   home: http://pydotplus.readthedocs.org/
   license: MIT
+  license_family: MIT
+  license_file: LICENSE
   summary: "Python interface to Graphviz's Dot language"
 
 extra:
