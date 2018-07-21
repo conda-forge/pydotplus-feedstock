@@ -10,11 +10,13 @@ source:
   md5: 0e2fc3dbdfd846819d4cd3769cb4595b
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  noarch: python
+  number: 1
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  build:
+  host:
+    - pip
     - python
     - setuptools
     - pyparsing >=2.0.1
@@ -30,6 +32,8 @@ test:
 about:
   home: http://pydotplus.readthedocs.org/
   license: MIT
+  license_family: MIT
+  license_file: LICENSE
   summary: "Python interface to Graphviz's Dot language"
 
 extra:
