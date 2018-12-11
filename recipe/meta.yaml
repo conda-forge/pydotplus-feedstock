@@ -8,6 +8,9 @@ source:
   fn: pydotplus-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/p/pydotplus/pydotplus-{{ version }}.tar.gz
   md5: 0e2fc3dbdfd846819d4cd3769cb4595b
+  patches:
+    # https://github.com/carlos-jenkins/pydotplus/pull/18
+    - 0001-Detect-graphviz-executables-with-bat-extension.patch
 
 build:
   noarch: python
