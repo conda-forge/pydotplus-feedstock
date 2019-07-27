@@ -14,7 +14,7 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 3
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -43,5 +43,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - chrisfilo
     - satra
