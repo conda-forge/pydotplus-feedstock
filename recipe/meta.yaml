@@ -14,19 +14,19 @@ source:
 
 build:
   noarch: python
-  number: 3
+  number: 4
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - setuptools
     - pyparsing >=2.0.1
     - graphviz
 
   run:
-    - python
+    - python >=3.6
     - pyparsing >=2.0.1
     - graphviz
 
