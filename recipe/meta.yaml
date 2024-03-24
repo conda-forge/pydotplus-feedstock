@@ -22,8 +22,6 @@ requirements:
     - pip
     - python >=3.6
     - setuptools
-    - pyparsing >=2.0.1
-    - graphviz
 
   run:
     - python >=3.6
