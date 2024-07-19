@@ -14,7 +14,7 @@ source:
 
 build:
   noarch: python
-  number: 5
+  number: 6
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -22,8 +22,6 @@ requirements:
     - pip
     - python >=3.6
     - setuptools
-    - pyparsing >=2.0.1
-    - graphviz
 
   run:
     - python >=3.6
@@ -45,4 +43,5 @@ extra:
   recipe-maintainers:
     - satra
     - jschueller
+    - PaulKMueller
     
