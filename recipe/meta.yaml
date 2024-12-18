@@ -6,7 +6,7 @@ package:
 
 source:
   fn: pydotplus-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/p/pydotplus/pydotplus-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/pydotplus/pydotplus-{{ version }}.tar.gz
   md5: 0e2fc3dbdfd846819d4cd3769cb4595b
   patches:
     # https://github.com/carlos-jenkins/pydotplus/pull/18
@@ -14,21 +14,23 @@ source:
 
 build:
   noarch: python
-  number: 6
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 7
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
 
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - pyparsing >=2.0.1
     - graphviz
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pydotplus
 
